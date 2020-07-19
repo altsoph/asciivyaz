@@ -14,7 +14,7 @@ Once, a colleague of mine, [Anna Shishlyakova](https://twitter.com/ashlkv) drew 
 ![the original drawing by Anna on the left side and the generated vyaz on the right side](https://raw.githubusercontent.com/altsoph/asciivyaz/master/gallery/greplogs.png)
 *the original drawing by Anna on the left side and the generated vyaz on the right side*
 
-##general description
+## general description
 The current implementation consists of several components:
 * a configuration file that determines the size of symbols, kerning and ligature assembly parameters (as an example, I give a pack of several different configuration files with crafted parameters)
 * a font geometry file now contains Latin and Cyrillic symbols, plus Arabic numerals, it can be expanded
