@@ -1,0 +1,912 @@
+' ':
+  anchors:
+  edges:
+'0':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+'1':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+  edges:
+  - [lb, lt, '<']
+'2':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rt: [1, t]
+    rb: [1, b]
+    ru: [1, u]
+  edges:
+  - [lb, lm, '<']
+  - [lb, rb, '=']
+  - [ru, rt, '<']
+  - [lt, rt, '=']
+  - [lm, ru, '<=']
+'3':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rd, '>=']
+  - [ru, rt, '<']
+  - [lm, ru, '<=']
+'4':
+  anchors:
+    lt: [0, t]
+    lu: [0, u]
+    rb: [1, b]
+    rt: [1, t]
+    rm: [1, m]
+  edges:
+  - [lu, lt, '<']
+  - [rm, rt, '<']
+  - [rb, rm, '<']
+  - [lu, rm, '>=']
+'5':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    rt: [1, t]
+  edges:
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rd, '>=']
+  - [lm, lt, '<']
+'6':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<=']
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rd, '>=']
+'7':
+  anchors:
+    lb: [0, b]
+    ld: [0, d]
+    lt: [0, t]
+    rt: [1, t]
+  edges:
+  - [lb, ld, '<']
+  - [lt, rt, '=']
+  - [ld, rt, '<=']
+'8':
+  anchors:
+    lb: [0, b]
+    ld: [0, d]
+    lu: [0, u]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, ld, '<']
+  - [lu, lt, '<=']
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lu, rd, '>=']
+  - [ru, rt, '<']
+  - [ld, ru, '<=']
+'9':
+  anchors:
+    lm: [0, m]
+    lt: [0, t]
+    rd: [1, d]
+    rt: [1, t]
+    rb: [1, b]
+    lb: [0, b]
+  edges:
+  - [lm, lt, '<']
+  - [rd, rt, '<']
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lm, rd, '>=']
+  - [lb, rb, '=']
+'A':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    ld: [0, d]
+    rb: [1, b]
+    rm: [1, m]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, ld, '>=']
+  - [rb, rm, '<']
+  - [rm, rt, '<']
+  - [ld, rm, '<=']
+  - [lm, rt, '<']
+'B':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<=']
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rd, '>=']
+  - [ru, rt, '<']
+  - [lm, ru, '<=']
+'C':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+'D':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rd: [1, d]
+    ru: [1, u]
+  edges:
+  - [lb, lt, '<']
+  - [rd, ru, '<']
+  - [lt, ru, '>=']
+  - [lb, rd, '<=']
+'E':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rm: [1, m]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rm, '=']
+'F':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rm: [1, m]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [lt, rt, '=']
+  - [lm, rm, '=']
+'G':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+    rm: [1, m]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rm, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+'H':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rm: [1, m]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [rb, rm, '<']
+  - [rm, rt, '<']
+  - [lm, rm, '=']
+'I':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+  edges:
+  - [lb, lt, '<']
+'J':
+  anchors:
+    lb: [0, b]
+    ld: [0, d]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [rb, rt, '<']
+  - [lb, ld, '<']
+  - [lb, rb, '=']
+'K':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<=']
+  - [rb, rd, '<']
+  - [lm, rd, '>=']
+  - [ru, rt, '<']
+  - [lm, ru, '<=']
+'L':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+  edges:
+  - [lb, lt, '<']
+  - [lb, rb, '=']
+'M':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    mb: [1, b]
+    mm: [1, m]
+    mt: [1, t]
+    rb: [2, b]
+    rt: [2, t]
+  edges:
+  - [lb, lm, '<']
+  - [rb, rt, '<']
+  - [mb, mm, '<']
+  - [mm, mt, '<']
+  - [lm, mt, '<']
+  - [mm, rt, '<']
+'N':
+  anchors:
+    lb: [0, b]
+    ld: [0, d]
+    lt: [0, t]
+    rb: [1, b]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [lt, rb, '>']
+'O':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+'P':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [lt, rt, '=']
+  - [ru, rt, '<']
+  - [lm, ru, '<']
+'Q':
+  anchors:
+    ld: [0, d]
+    lt: [0, t]
+    rd: [1, d]
+    rt: [1, t]
+    rb: [1, b]
+  edges:
+  - [ld, lt, '<']
+  - [rd, rt, '<']
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [ld, rd, '=']
+'R':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    ru: [1, u]
+    rt: [1, t]
+    rb: [1, b]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [lt, rt, '=']
+  - [ru, rt, '<']
+  - [lm, ru, '<']
+  - [lm, rb, '>']
+'S':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    rt: [1, t]
+  edges:
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rd, '>=']
+  - [lm, lt, '<']
+'T':
+  anchors:
+    lt: [0, t]
+    mt: [1, t]
+    mb: [1, b]
+    rt: [2, t]
+  edges:
+  - [lt, mt, '=']
+  - [mb, mt, '<']
+  - [mt, rt, '=']
+'U':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [lb, rb, '=']
+'V':
+  anchors:
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lm, lt, '<']
+  - [rb, rt, '<']
+  - [lm, rb, '>']
+'W':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    mb: [1, b]
+    mm: [1, m]
+    rb: [2, b]
+    rt: [2, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [mb, mm, '<']
+  - [lb, mb, '=']
+  - [mb, rb, '=']
+'X':
+  anchors:
+    lt: [0, t]
+    lu: [0, u]
+    lb: [0, b]
+    ld: [0, d]
+    rt: [1, t]
+    ru: [1, u]
+    rb: [1, b]
+    rd: [1, d]
+  edges:
+  - [lu, lt, '<']
+  - [lb, ld, '<']
+  - [ru, rt, '<']
+  - [rb, rd, '<']
+  - [lu, rd, '>']
+  - [ld, ru, '<']
+'Y':
+  anchors:
+    lt: [0, t]
+    lu: [0, u]
+    lb: [0, b]
+    rt: [1, t]
+    rm: [1, m]
+  edges:
+  - [lu, lt, '<']
+  - [rm, rt, '<']
+  - [lb, rm, '<=']
+  - [lu, rm, '>=']
+'Z':
+  anchors:
+    lt: [0, t]
+    lb: [0, b]
+    rt: [1, t]
+    rb: [1, b]
+  edges:
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lb, rt, '<']
+'Ё':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rm: [1, m]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rm, '=']
+'А':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    ld: [0, d]
+    rb: [1, b]
+    rm: [1, m]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, ld, '>=']
+  - [rb, rm, '<']
+  - [rm, rt, '<']
+  - [ld, rm, '<=']
+  - [lm, rt, '<']
+'Б':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<=']
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rd, '>=']
+'В':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<=']
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rd, '>=']
+  - [ru, rt, '<']
+  - [lm, ru, '<=']
+'Г':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [lt, rt, '=']
+'Д':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [rb, rt, '<']
+  - [lm, rt, '<']
+  - [lb, rb, '=']
+'Е':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rm: [1, m]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rm, '=']
+'Ж':
+  anchors:
+    lb: [0, b]
+    ld: [0, d]
+    lu: [0, u]
+    lt: [0, t]
+    mb: [1, b]
+    mm: [1, m]
+    mt: [1, t]
+    rb: [2, b]
+    rd: [2, d]
+    ru: [2, u]
+    rt: [2, t]
+  edges:
+  - [lb, ld, '<']
+  - [lu, lt, '<']
+  - [rb, rd, '<']
+  - [ru, rt, '<']
+  - [mb, mm, '<']
+  - [mm, mt, '<']
+  - [lu, mm, '>']
+  - [ld, mm, '<']
+  - [ru, mm, '>']
+  - [rd, mm, '<']
+'З':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [rb, rd, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rd, '>=']
+  - [ru, rt, '<']
+  - [lm, ru, '<=']
+'И':
+  anchors:
+    lb: [0, b]
+    ld: [0, d]
+    lt: [0, t]
+    rb: [1, b]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [ld, ru, '<']
+'Й':
+  anchors:
+    lb: [0, b]
+    ld: [0, d]
+    lt: [0, t]
+    rb: [1, b]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [ld, ru, '<']
+'К':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<=']
+  - [rb, rd, '<']
+  - [lm, rd, '>=']
+  - [ru, rt, '<']
+  - [lm, ru, '<=']
+'Л':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [rb, rt, '<']
+  - [lm, rt, '<']
+'М':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    mb: [1, b]
+    mm: [1, m]
+    mt: [1, t]
+    rb: [2, b]
+    rt: [2, t]
+  edges:
+  - [lb, lm, '<']
+  - [rb, rt, '<']
+  - [mb, mm, '<']
+  - [mm, mt, '<']
+  - [lm, mt, '<']
+  - [mm, rt, '<']
+'Н':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rm: [1, m]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [rb, rm, '<']
+  - [rm, rt, '<']
+  - [lm, rm, '=']
+'О':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+'П':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [lt, rt, '=']
+'Р':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    ru: [1, u]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [lt, rt, '=']
+  - [ru, rt, '<']
+  - [lm, ru, '<']
+'С':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+'Т':
+  anchors:
+    lt: [0, t]
+    mt: [1, t]
+    mb: [1, b]
+    rt: [2, t]
+  edges:
+  - [lt, mt, '=']
+  - [mb, mt, '<']
+  - [mt, rt, '=']
+'У':
+  anchors:
+    lt: [0, t]
+    lu: [0, u]
+    lb: [0, b]
+    rt: [1, t]
+    rm: [1, m]
+  edges:
+  - [lu, lt, '<']
+  - [rm, rt, '<']
+  - [lb, rm, '<=']
+  - [lu, rm, '>=']
+'Ф':
+  anchors:
+    lt: [0, t]
+    mt: [1, t]
+    mb: [1, b]
+    rt: [2, t]
+    lu: [0, u]
+    ru: [2, u]
+    mm: [1, m]
+  edges:
+  - [lt, mt, '=']
+  - [mb, mt, '<']
+  - [mt, rt, '=']
+  - [lu, lt, '<=']
+  - [lu, mm, '>=']
+  - [ru, rt, '<=']
+  - [ru, mm, '>=']
+'Х':
+  anchors:
+    lt: [0, t]
+    lu: [0, u]
+    lb: [0, b]
+    ld: [0, d]
+    rt: [1, t]
+    ru: [1, u]
+    rb: [1, b]
+    rd: [1, d]
+  edges:
+  - [lu, lt, '<']
+  - [lb, ld, '<']
+  - [ru, rt, '<']
+  - [rb, rd, '<']
+  - [lu, rd, '>']
+  - [ld, ru, '<']
+'Ц':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    rb: [1, b]
+    rt: [1, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [lb, rb, '=']
+'Ч':
+  anchors:
+    lt: [0, t]
+    lu: [0, u]
+    rb: [1, b]
+    rt: [1, t]
+    rm: [1, m]
+  edges:
+  - [lu, lt, '<']
+  - [rm, rt, '<']
+  - [rb, rm, '<']
+  - [lu, rm, '>=']
+'Ш':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    mb: [1, b]
+    mu: [1, u]
+    rb: [2, b]
+    rt: [2, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [mb, mu, '<']
+  - [lb, mb, '=']
+  - [mb, rb, '=']
+'Щ':
+  anchors:
+    lb: [0, b]
+    lt: [0, t]
+    mb: [1, b]
+    mm: [1, m]
+    rb: [2, b]
+    rt: [2, t]
+  edges:
+  - [lb, lt, '<']
+  - [rb, rt, '<']
+  - [mb, mm, '<']
+  - [lb, mb, '=']
+  - [mb, rb, '=']
+'Ъ':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<=']
+  - [rb, rd, '<']
+  - [lb, rb, '<=']
+  - [lm, rd, '>=']
+'Ы':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+    rt: [1, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<=']
+  - [rb, rd, '<']
+  - [lb, rd, '<=']
+  - [lm, rd, '>=']
+  - [rd, rt, '<']
+'Ь':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rd: [1, d]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<=']
+  - [rb, rd, '<']
+  - [lb, rb, '<=']
+  - [lm, rd, '>=']
+'Э':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    rb: [1, b]
+    rm: [1, m]
+    rt: [1, t]
+  edges:
+  - [rb, rm, '<']
+  - [rm, rt, '<']
+  - [lt, rt, '=']
+  - [lb, rb, '=']
+  - [lm, rm, '=']
+'Ю':
+  anchors:
+    lb: [0, b]
+    lm: [0, m]
+    lt: [0, t]
+    mb: [1, b]
+    mm: [1, m]
+    mt: [1, t]
+    rb: [2, b]
+    rt: [2, t]
+  edges:
+  - [lb, lm, '<']
+  - [lm, lt, '<']
+  - [rb, rt, '<']
+  - [mb, mm, '<']
+  - [mm, mt, '<']
+  - [lm, mm, '=']
+  - [mt, rt, '=']
+  - [mb, rb, '=']
+'Я':
+  anchors:
+    lt: [0, t]
+    lu: [0, u]
+    lb: [0, b]
+    rt: [1, t]
+    rm: [1, m]
+    rb: [1, b]
+  edges:
+  - [lu, lt, '<']
+  - [rm, rt, '<']
+  - [lb, rm, '<=']
+  - [lu, rm, '>=']
+  - [rb, rm, '<']
+  - [lt, rt, '=']

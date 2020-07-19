@@ -1,0 +1,24 @@
+# char size
+h: 6
+w: 3
+dx: 2
+dy: 1
+# anchors positions
+t: 6
+u: 5
+m: 3
+d: 1
+b: 0
+# symbols
+
+a: ▒
+e: █
+
+# magic parameters
+vc:  1  # margin size for intersection checks
+pad: 3  # interletter padding
+f: 3    # maximum vertical displacement, should be le than w/2
+sq: 0   # squeeze (0/1)
+dp: 1   # antidistortion weight
+rtr: 16 # num of retries for random layout
+fsq: 1  # final compression (-1 = off, other value -- padding we want to keep)
