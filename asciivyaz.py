@@ -4,6 +4,7 @@ import random
 from collections import defaultdict
 from fractions import Fraction
 import argparse
+import re
 
 
 # Bresenham's line algorithm from Rosetta Code
@@ -473,6 +474,13 @@ def unfold_shape(shape, config, prefix = ""):
 
 def put_text_random(space,text, config, geometry, return_raw = False):
 	items = []
+	new_text = ""
+	for i,c in enumerate(text.upper()):
+		if c in geometry:
+			new_text += c
+		else:
+			new_text += " "
+	text = re.sub(r' +', ' ', new_text.strip())
 	for i,c in enumerate(text.upper()):
 		items.append( {
 						'text':c, 
