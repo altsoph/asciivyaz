@@ -1,10 +1,11 @@
 import sys
+import re
 import yaml
 import random
+from glob import glob
 from collections import defaultdict
 from fractions import Fraction
 import argparse
-import re
 
 
 # Bresenham's line algorithm from Rosetta Code
@@ -535,19 +536,23 @@ methods = [
 
 def main():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--config', type=str, default='cfg.yaml',
+	parser.add_argument('--config', '-c', type=str, default='cfg.yaml',
 	                    help='config file')
-	parser.add_argument('--geometry', type=str, default='geometry.yaml',
+	parser.add_argument('--geometry', '-g', type=str, default='geometry.yaml',
 	                    help='font geometry file')
-	parser.add_argument('--text', type=str, default='text',
+	parser.add_argument('--text', '-t', type=str, default='text',
 	                    help='text to draw')
-	parser.add_argument('--seed', type=int, default=-1,
+	parser.add_argument('--seed', '-s', type=int, default=-1,
 	                    help='random seed')
-	parser.add_argument('--method', type=str, default='random_best',
+	parser.add_argument('--method', '-m', type=str, default='random_best',
 	                    help='method to use')
 	args = parser.parse_args()
 
 	if args.seed != -1: random.seed(args.seed)
+	if args.config == 'shuf':
+		args.config = random.choice( glob('cfg*.yaml') )
+	if args.method == 'shuf':
+		args.method = random.choice( ['greedy', 'random', 'random_best'] )
 	config = yaml.load(open(args.config, encoding='utf-8').read(), Loader=yaml.FullLoader)
 	geometry  = yaml.load(open(args.geometry, encoding='utf-8').read(), Loader=yaml.FullLoader)
 
@@ -564,4 +569,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
