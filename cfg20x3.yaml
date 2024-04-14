@@ -3,14 +3,15 @@ h: 20
 w: 3
 dx: 2
 dy: 1
+
 # anchors positions
 t: 20
 u: 15
 m: 10
 d: 6
 b: 0
-# symbols
 
+# symbols
 a: ▒
 e: █
 
