@@ -533,7 +533,6 @@ methods = [
 	('random_best', put_text_random_best)
 ]
 
-
 def main():
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--config', '-c', type=str, default='cfg.yaml',
@@ -565,7 +564,6 @@ def main():
 			print(f'Method: {p}')
 			space = fn(defaultdict(str), args.text, config, geometry)
 			draw_space(space, config)
-
 
 if __name__ == '__main__':
     main()

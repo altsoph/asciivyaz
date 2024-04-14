@@ -1,5 +1,8 @@
 # ASCIIvyaz
 ![](https://raw.githubusercontent.com/altsoph/asciivyaz/master/gallery/logo_square.png)
+
+Accepted for [PCG workshop](https://www.pcgworkshop.com/) at [FDG 2024](http://fdg2024.org/).
+
 # tldr
 I tried to automate the formation of ligatures in style of Slavic calligraphy, called [Vyaz](https://en.wikipedia.org/wiki/Vyaz).
 A gallery with examples of results can be [found here](https://github.com/altsoph/asciivyaz/tree/master/gallery). 
